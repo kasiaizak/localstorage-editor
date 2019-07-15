@@ -11,6 +11,10 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #E6E7EB 0%, #A1A4B1 100%), #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
