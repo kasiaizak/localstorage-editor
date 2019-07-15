@@ -1,5 +1,13 @@
 "use strict";
 
-import moment from 'moment';
+const editorArea = document.querySelector('.editor__area--js');
+const saveButton = document.querySelector('.editor__button--save-js');
+const loadButton = document.querySelector('.editor__button--load-js');
 
-console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
+saveButton.addEventListener('click', (e) => {
+  localStorage.setItem('textinput',editorArea.value);
+});
+
+loadButton.addEventListener('click', (e) => {
+  editorArea.value = localStorage.getItem('textinput');
+});
