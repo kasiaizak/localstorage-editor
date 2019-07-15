@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>LocalStorage Editor</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <h1>Hello world!</h1>
-  
+  <main class="editor">
+    <h1 class="editor__title">LocalStorage Editor</h1>
+    <textarea name="localstorage-editor" id="textarea" cols="30" rows="10" class="editor__area"></textarea>
+    <div class="editor__buttons">
+      <button class="editor__button editor_button--load editor_button--load-js">Load</button>
+      <button class="editor__button editor_button--save editor_button--save-js">Save</button>
+    </div>
+  </main>
   <script src="js/main.js"></script>
 </body>
 </html>
