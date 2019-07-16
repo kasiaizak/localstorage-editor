@@ -1,6 +1,7 @@
 # LocalStorage Editor
 
 Prosta strona pokazująca przechowywanie wprowadzonego tekstu przez użytkownika w lokalnej pamięci komputera. Przycisk *Save* zapisuje tekst do pamięci, przycisk *Load* przywraca ten tekst po odświeżeniu strony, bądź po zamknięciu okna przeglądarki.
+
 Wygląd strony zaprojektowany w [Figmie](https://www.figma.com/) przy użyciu [Product Design Kit 1.0](https://pdkit.co/), a następnie przeniesiony na kod. - [widok on-line](https://kasiaizak.github.io/localstorage-editor/)
 
 ## Wykorzystane technologie:
