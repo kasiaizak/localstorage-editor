@@ -308,6 +308,16 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn); } }
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn); } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -330,24 +340,25 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-style: normal;
-  height: 100vh;
+  min-height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 100vw; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    body {
+      /* IE10+ CSS styles go here */
+      height: 100vh; } }
 
 .editor {
   margin: 16px; }
   .editor__area {
     background: #fff;
-    border: 1px solid #A1A4B1;
-    border-radius: 4px;
+    border: none;
     color: #A1A4B1;
     font-weight: normal;
+    height: 100%;
     line-height: 24px;
-    min-height: 280px;
-    max-width: 448px;
-    padding: 16px;
     width: 100%; }
   .editor__button {
     border: 1px solid #121232;
@@ -374,6 +385,43 @@ body {
             justify-content: flex-end;
     margin-top: 24px;
     width: 100%; }
+  .editor__frame {
+    border-radius: 10px;
+    height: 250px;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+    width: 400px;
+    z-index: 0; }
+    .editor__frame::after {
+      background: #fff;
+      border-radius: 5px;
+      content: '';
+      left: 6px;
+      position: absolute;
+      top: 6px;
+      height: calc(100% - 12px);
+      width: calc(100% - 12px);
+      z-index: -1; }
+    .editor__frame::before {
+      -webkit-animation: rotate 4s linear infinite;
+              animation: rotate 4s linear infinite;
+      background-color: #0068FF;
+      background-image: -webkit-gradient(linear, left top, right top, from(#FF0000), color-stop(#FF0000), color-stop(#FF7F00), color-stop(#FFFF00), color-stop(#00BC3F), color-stop(#0068FF), color-stop(#7A00E5), color-stop(#D300C9), to(#D300C9));
+      background-image: -webkit-linear-gradient(left, #FF0000, #FF0000, #FF7F00, #FFFF00, #00BC3F, #0068FF, #7A00E5, #D300C9, #D300C9);
+      background-image: -o-linear-gradient(left, #FF0000, #FF0000, #FF7F00, #FFFF00, #00BC3F, #0068FF, #7A00E5, #D300C9, #D300C9);
+      background-image: linear-gradient(to right, #FF0000, #FF0000, #FF7F00, #FFFF00, #00BC3F, #0068FF, #7A00E5, #D300C9, #D300C9);
+      background-repeat: no-repeat;
+      content: '';
+      height: 200%;
+      left: -50%;
+      position: absolute;
+      top: -50%;
+      width: 200%;
+      z-index: -2; }
+      @supports (background-image: conic-gradient(#fff, #000)) {
+        .editor__frame::before {
+          background-image: conic-gradient(#FF0000, #FF7F00, #FFFF00, #00BC3F, #0068FF, #7A00E5, #D300C9, #FF0000); } }
   .editor__title {
     color: #000000;
     font-size: 44px;
