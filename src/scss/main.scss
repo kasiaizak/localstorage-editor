@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
 @import "_variables";
 
+@keyframes rotate {
+	100% { transform: rotate(1turn); }
+}
 
 html {
   box-sizing: border-box;
@@ -27,19 +30,16 @@ body {
   margin: 16px;
   &__area {
     background: $white;
-    border: 1px solid $gray;
-    border-radius: $radius;
+    border: none;
     color: $gray;
     font-weight: normal;
+    height: 100%;
     line-height: 24px;
-    min-height: 280px;
-    max-width: 448px;
-    padding: 16px;
     width: 100%;
   }
   &__button {
     border: 1px solid #121232;
-    border-radius: $radius;
+    border-radius: 4px;
     font-weight: 600;
     letter-spacing: 0.5px;
     line-height: 16px;
@@ -61,6 +61,39 @@ body {
     justify-content: flex-end;
     margin-top: 24px;
     width: 100%;
+  }
+  &__frame {
+    border-radius: 10px;
+    height: 250px;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+    width: 400px;
+    z-index: 0;
+    &::after {
+      background: $white;
+      border-radius: 5px;
+      content: '';
+      left: 6px;
+      position: absolute;
+      top: 6px;
+      height: calc(100% - 12px);
+      width: calc(100% - 12px);
+      z-index: -1;
+    }
+    &::before {
+      animation: rotate 4s linear infinite;
+      background-color: $blue;
+      background-image: conic-gradient($red, $orange, $yellow, $green, $blue, $violet, $pink, $red);
+      background-repeat: no-repeat;
+      content: '';
+      height: 200%;
+      left: -50%;
+      position: absolute;
+      top: -50%;
+      width: 200%;
+      z-index: -2;
+    }
   }
   &__title {
     color: #000000;
