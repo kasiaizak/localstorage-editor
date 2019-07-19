@@ -21,9 +21,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-style: normal;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   width: 100vw;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    height: 100vh;
+  }
 }
 
 .editor {
@@ -84,7 +88,7 @@ body {
     &::before {
       animation: rotate 4s linear infinite;
       background-color: $blue;
-      background-image: conic-gradient($red, $orange, $yellow, $green, $blue, $violet, $pink, $red);
+      background-image: linear-gradient(to right, $red, $red, $orange, $yellow, $green, $blue, $violet, $pink, $pink);
       background-repeat: no-repeat;
       content: '';
       height: 200%;
@@ -93,6 +97,9 @@ body {
       top: -50%;
       width: 200%;
       z-index: -2;
+      @supports (background-image: conic-gradient(#fff, #000)) {
+        background-image: conic-gradient($red, $orange, $yellow, $green, $blue, $violet, $pink, $red);
+      }
     }
   }
   &__title {
