@@ -58,6 +58,13 @@ body {
       color: #121232;
       margin-right: 8px;
     }
+    @media screen and (max-width: $mobileL) {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+    @media screen and (max-width: $mobileS) {
+      font-size: 0.6rem;
+    }
   }
   &__buttons {
     display: flex;
@@ -72,7 +79,6 @@ body {
     overflow: hidden;
     padding: 1rem;
     position: relative;
-    width: 400px;
     z-index: 0;
     &::after {
       background: $white;
@@ -107,8 +113,17 @@ body {
     font-size: 44px;
     font-weight: 600;
     line-height: 64px;
-    @media screen and (max-width: 425px) {
-      font-size: 22px;
+    @media screen and (max-width: $mobileL) {
+      font-size: 2.2rem;
+    }
+    @media screen and (max-width: $mobileM) {
+      font-size: 1.8rem;
+    }
+    @media screen and (max-width: $mobileS) {
+      font-size: 1.6rem;
+    }
+    @media screen and (max-width: $mobileXS) {
+      font-size: 1.2rem;
     }
   }
 }
