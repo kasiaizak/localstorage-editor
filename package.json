@@ -47,7 +47,6 @@
     ]
   },
   "dependencies": {
-    "browser-update": "^3.3.1",
-    "moment": "^2.24.0"
+    "browser-update": "^3.3.1"
   }
 }
