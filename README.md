@@ -1,12 +1,14 @@
+![cover](https://raw.githubusercontent.com/kasiaizak/localstorage-editor/master/src/assets/img/cover.png)
+
 # LocalStorage Editor
 
 Prosta strona pokazująca przechowywanie wprowadzonego tekstu przez użytkownika w lokalnej pamięci komputera. Przycisk *Save* zapisuje tekst do pamięci, przycisk *Load* przywraca ten tekst po odświeżeniu strony, bądź po zamknięciu okna przeglądarki.
 
 Wygląd strony zaprojektowany w [Figmie](https://www.figma.com/) przy użyciu [Product Design Kit 1.0](https://pdkit.co/), a następnie przeniesiony na kod. Animowana tęczowa ramka może wyglądać inaczej, niż na zrzucie ekranowym, w zależności od używanej przeglądarki ze względu na różnice we wspieraniu właściwości *conic-gradient* - [widok on-line](https://kasiaizak.github.io/localstorage-editor/)
 
-## Wykorzystane technologie
+## Użyte technologie
 
-HTML5, CSS3 (w tym flex) z użyciem preprocesora SASS oraz JavaScript.
+HTML5, CSS3 (w tym Flexbox) z użyciem preprocesora Sass oraz JavaScript ES6.
 
 ## Podgląd strony
 
