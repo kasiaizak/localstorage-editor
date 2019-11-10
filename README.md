@@ -12,7 +12,7 @@ HTML5, CSS3 (w tym Flexbox) z użyciem preprocesora Sass oraz JavaScript ES6.
 
 ## Podgląd strony
 
-![Screenshot](https://raw.githubusercontent.com/kasiaizak/localstorage-editor/master/github/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/kasiaizak/localstorage-editor/master/github/screenshot.jpg)
 
 ## Uruchomienie strony lokalnie z podglądem zmian na żywo (dla developerów korzystających z Node.js)
 
